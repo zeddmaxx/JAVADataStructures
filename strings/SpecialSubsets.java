@@ -13,7 +13,7 @@ public class SpecialSubsets {
 	public static ArrayList<String> SpecialSub(String s){
 		if(s.length()==0) {
 			ArrayList<String> b = new ArrayList<>();
-			b.add(" ");
+			b.add("");
 			return b;
 		}
 		
@@ -24,9 +24,8 @@ public class SpecialSubsets {
 		
 		for(String var: res) {
 			fin.add(var);
-			//fin.add((""+(int)ch));
-			fin.add((var+""+ch));
-			fin.add((var+""+(int)ch));
+			fin.add((ch+var));
+			fin.add((var+(int)ch));
 			
 		}
 		return fin;
