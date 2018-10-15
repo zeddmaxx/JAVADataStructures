@@ -8,7 +8,6 @@ public class equiSet {
 	public static void main(String[] args) {
 		
 		int[] arr = { 10, 20, 30, 40, 50, 60, 70};
-		//int tar = 50;
 		
 		ArrayList<Integer> a = new ArrayList<>();
 		ArrayList<Integer> b = new ArrayList<>();

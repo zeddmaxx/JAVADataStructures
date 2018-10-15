@@ -4,10 +4,10 @@ public class PrintPemutations {
 
 	public static void main(String[] args) {
 		String s = "abc";
-		//PrintPermutations2(s, "");
+		PrintPermutations2(s, "");
 		StringBuilder s1 = new StringBuilder("abc");
 		StringBuilder s2 = new StringBuilder();
-		PrintPermutations1SB(s1, s2);
+		//PrintPermutations1SB(s1, s2);
 		//PrintPermutations1SB(s1, s2);
 
 	}
@@ -23,7 +23,7 @@ public static void PrintPermutations2(String str, String asf) {
 		for(int i=0; i<=asf.length(); i++) {
 			String l = asf.substring(0, i);
 			String r = asf.substring(i);
-			PrintPermutations2(roq, l+ch+r);
+			PrintPermutations2(roq, r+ch+l);
 		}
 		
 	}
@@ -71,12 +71,18 @@ public static void PrintPermutations2SB(StringBuilder s1, StringBuilder s2) {
 		}
 		
 		for(int i=0; i<s1.length(); i++) {
+			
 			char ch = s1.charAt(i);
 			s1.deleteCharAt(i);
-			s2.insert(i, ch);
+			s2.insert(0, ch);
+			
+			
+			
 			PrintPermutations2SB(s1, s2);
-			s2.deleteCharAt(i);
-			s1.insert(0, ch);
+			s2.deleteCharAt(0);
+			s1.insert(i, ch);
+			
+			
 		}
 		
 		
